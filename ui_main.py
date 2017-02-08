@@ -25,59 +25,60 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(943, 673)
-        MainWindow.setStyleSheet(_fromUtf8("background-color: rgb(0, 0, 0);"))
-        self.centralwidget = QtGui.QWidget(MainWindow)
-        self.centralwidget.setEnabled(True)
-        self.centralwidget.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.centralwidget.setStyleSheet(_fromUtf8("background-color: rgb(0, 0, 0);"))
-        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        self.FFT = PlotWidget(self.centralwidget)
-        self.FFT.setGeometry(QtCore.QRect(8, 400, 921, 261))
-        self.FFT.setStyleSheet(_fromUtf8("border: 0px"))
-        self.FFT.setObjectName(_fromUtf8("FFT"))
-        self.PCM = PlotWidget(self.centralwidget)
-        self.PCM.setGeometry(QtCore.QRect(8, 51, 921, 291))
-        self.PCM.setStyleSheet(_fromUtf8("border: 0px"))
-        self.PCM.setObjectName(_fromUtf8("PCM"))
-        self.label = QtGui.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(6, 4, 271, 41))
-        self.label.setStyleSheet(_fromUtf8("font: 63 16pt \"Segoe UI Semibold\";\n"
+        MainWindow.resize(460, 300)
+        MainWindow.setStyleSheet(_fromUtf8("QMainWinodw{\n"
+"background-color: rgb(0, 0, 0);\n"
+"}\n"
+"QWidget{\n"
+"background-color: rgb(0, 0, 0);\n"
+"}\n"
+"QPushButton {\n"
 "border: 2px solid #333333;\n"
 "border-radius: 6px;\n"
 "background-color: #222222;\n"
 "background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
 "color: white;\n"
-""))
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);\n"
+"}\n"
+"\n"
+"QComboBox:hover,QPushButton:hover\n"
+"{\n"
+"border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);\n"
+"}\n"
+"\n"
+"QTextBrowser {\n"
+"background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QLabel {\n"
+"border: 2px solid #333333;\n"
+"border-radius: 6px;\n"
+"background-color: #222222;\n"
+"background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
+"color: white;\n"
+"\n"
+"}"))
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.EXIT = QtGui.QPushButton(self.centralwidget)
+        self.EXIT.setGeometry(QtCore.QRect(363, 5, 91, 20))
+        self.EXIT.setStyleSheet(_fromUtf8(""))
+        self.EXIT.setObjectName(_fromUtf8("MIC1"))
+        self.PCM = PlotWidget(self.centralwidget)
+        self.PCM.setGeometry(QtCore.QRect(5, 175, 451, 121))
+        self.PCM.setObjectName(_fromUtf8("PCM"))
+        self.FFT = PlotWidget(self.centralwidget)
+        self.FFT.setGeometry(QtCore.QRect(5, 29, 451, 121))
+        self.FFT.setObjectName(_fromUtf8("FFT"))
+        self.label = QtGui.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(5, 5, 100, 20))
         self.label.setObjectName(_fromUtf8("label"))
         self.label_2 = QtGui.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(7, 350, 256, 41))
-        self.label_2.setStyleSheet(_fromUtf8("font: 63 16pt \"Segoe UI Semibold\";\n"
-"border: 2px solid #333333;\n"
-"border-radius: 6px;\n"
-"background-color: #222222;\n"
-"background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
-"color: white;\n"
-""))
+        self.label_2.setGeometry(QtCore.QRect(5, 152, 100, 20))
         self.label_2.setObjectName(_fromUtf8("label_2"))
-        self.sendData = QtGui.QPushButton(self.centralwidget)
-        self.sendData.setGeometry(QtCore.QRect(290, 4, 111, 41))
-        self.sendData.setStyleSheet(_fromUtf8("border: 2px solid #333333;\n"
-"border-radius: 6px;\n"
-"background-color: #222222;\n"
-"background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
-"color: white;\n"
-""))
-        self.sendData.setObjectName(_fromUtf8("sendData"))
-        self.stopData = QtGui.QPushButton(self.centralwidget)
-        self.stopData.setGeometry(QtCore.QRect(407, 4, 111, 41))
-        self.stopData.setStyleSheet(_fromUtf8("border: 2px solid #333333;\n"
-"border-radius: 6px;\n"
-"background-color: #222222;\n"
-"background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
-"color: white;\n"
-""))
-        self.stopData.setObjectName(_fromUtf8("stopData"))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -85,10 +86,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
-        self.centralwidget.setToolTip(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", None))
-        self.label.setText(_translate("MainWindow", "Raw Data (PCM):", None))
-        self.label_2.setText(_translate("MainWindow", "Frequency Data (FFT):", None))
-        self.sendData.setText(_translate("MainWindow", "Send", None))
-        self.stopData.setText(_translate("MainWindow", "Stop", None))
+        self.EXIT.setText(_translate("MainWindow", "EXIT", None))
+        self.label.setText(_translate("MainWindow", "PCM Data", None))
+        self.label_2.setText(_translate("MainWindow", "Frequency Data", None))
 
 from pyqtgraph import PlotWidget

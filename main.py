@@ -35,7 +35,7 @@ class ExampleApp(QtGui.QMainWindow, ui_main.Ui_MainWindow):
         self.maxFFT = 0
         self.maxPCM = 0
         #self.sendData.clicked.connect(self.sending)
-        self.stopData.clicked.connect(self.stopping)
+        self.EXIT.clicked.connect(self.stopping)
         self.audio=Paudio.Paudio()
         self.audio.record_start()
 
@@ -57,6 +57,8 @@ class ExampleApp(QtGui.QMainWindow, ui_main.Ui_MainWindow):
 
     def stopping(self):
         self.audio.close()
+        form.close()
+        sys.exit()
 
 """
     def sending(self):
@@ -81,8 +83,8 @@ if __name__=="__main__":
     form.show()
     form.update()
     result = app.exec_()
-    User = raw_input("Press Enter to Exit:")
-    if User == '':
-        form.audio.close()
-        sys.exit()
+    #User = raw_input("Press Enter to Exit:")
+    #if User == '':
+    #    form.audio.close()
+    #    sys.exit()
                                            
