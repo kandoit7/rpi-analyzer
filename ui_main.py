@@ -63,10 +63,10 @@ class Ui_MainWindow(object):
 "}"))
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        self.EXIT = QtGui.QPushButton(self.centralwidget)
-        self.EXIT.setGeometry(QtCore.QRect(363, 5, 91, 20))
-        self.EXIT.setStyleSheet(_fromUtf8(""))
-        self.EXIT.setObjectName(_fromUtf8("MIC1"))
+        self.MIC1 = QtGui.QPushButton(self.centralwidget)
+        self.MIC1.setGeometry(QtCore.QRect(363, 5, 91, 20))
+        self.MIC1.setStyleSheet(_fromUtf8(""))
+        self.MIC1.setObjectName(_fromUtf8("MIC1"))
         self.PCM = PlotWidget(self.centralwidget)
         self.PCM.setGeometry(QtCore.QRect(5, 175, 451, 121))
         self.PCM.setObjectName(_fromUtf8("PCM"))
@@ -86,7 +86,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
-        self.EXIT.setText(_translate("MainWindow", "EXIT", None))
+        self.MIC1.setText(_translate("MainWindow", "EXIT", None))
         self.label.setText(_translate("MainWindow", "PCM Data", None))
         self.label_2.setText(_translate("MainWindow", "Frequency Data", None))
 
