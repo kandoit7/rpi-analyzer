@@ -1,1 +1,1 @@
-# rpi-analyzer
+# python-practice
